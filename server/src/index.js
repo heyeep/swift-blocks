@@ -9,6 +9,8 @@ const mongooseDB = require('./config/db.conf.js');
 const winston = require('winston')
 const expressWinston = require('express-winston')
 
+const deckRoutes = require('./routes/deck');
+
 const PORT = 8081;
 
 app.use(cors());
@@ -29,6 +31,8 @@ app.use(expressWinston.logger({
   // Ignore logging for now
   ignoreRoute: function (req, res) { return true; }
 }));
+
+app.use('/api/decks', deckRoutes)
 
 mongoose.Promise = global.Promise;
 

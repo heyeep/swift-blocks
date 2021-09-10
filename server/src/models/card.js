@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
 
-const CardSchema = mongoose.Schema({
+const CardSchema = new mongoose.Schema({
   title: String,
   author: String,
   description: String,
   sourceCode: String,
-  language: 'python'
+  language: String,
+  tags: [String]
 }, {
   timestamps: true
 });
 
-module.exports = mongoose.model('Card', CardSchema);
+module.exports = Card = mongoose.model('Card', CardSchema);
