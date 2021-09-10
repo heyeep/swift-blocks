@@ -5,7 +5,10 @@ const CardSchema = require('./card');
 
 const DeckSchema = new Schema({
   title: String,
-  cards: [CardSchema.schema]
+  author: String,
+  description: String,
+  cards: [CardSchema.schema],
+  tags: [String],
 })
 
 

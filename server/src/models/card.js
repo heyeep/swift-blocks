@@ -5,7 +5,7 @@ const CardSchema = new Schema({
   title: String,
   author: String,
   description: String,
-  sourceCode: String,
+  code: String,
   language: String,
   tags: [String]
 }, {
