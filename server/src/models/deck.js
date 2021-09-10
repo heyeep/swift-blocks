@@ -1,9 +1,14 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema
+
 const CardSchema = require('./card');
 
-const DeckSchema = mongoose.Schema({
+const DeckSchema = new Schema({
   title: String,
   cards: [CardSchema.schema]
 })
 
-moduleExports = Deck = mongoose.model('deck', DeckSchema);
+
+const Deck = mongoose.model('deck', DeckSchema);
+
+module.exports = Deck;
