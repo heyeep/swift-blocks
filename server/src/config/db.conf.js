@@ -1,3 +1,3 @@
 module.exports = {
-  url: 'mongodb://localhost:3232/swift-cards'
+  url: 'mongodb+srv://adminUser:<adminPass>@swift-blocks.x15d5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 }
