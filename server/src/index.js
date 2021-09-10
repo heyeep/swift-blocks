@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const mongooseDB = require('./config/db.conf.js');
+const mongoDB = require('./config/db.conf.js');
 
 const winston = require('winston')
 const expressWinston = require('express-winston')
@@ -36,7 +36,7 @@ app.use('/api/decks', deckRoutes)
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(mongooseDB, {
+mongoose.connect(mongoDB.url, {
   useNewUrlParser: true
 }).then(() => {
   console.log('Connected to database.');
